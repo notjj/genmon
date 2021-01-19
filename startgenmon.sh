@@ -85,22 +85,22 @@ for val in $PARAMS; do
     start)
       echo "Starting genmon python scripts"
       found_action=true
-      sudo $pythoncommand "$genmondir/genloader.py" -s $config_path
+      $pythoncommand "$genmondir/genloader.py" -s $config_path
       ;;
     stop)
       found_action=true
       echo "Stopping genmon python scripts"
-      sudo $pythoncommand "$genmondir/genloader.py" -x $config_path
+      $pythoncommand "$genmondir/genloader.py" -x $config_path
       ;;
     hardstop)
       found_action=true
       echo "Hard Stopping genmon python scripts"
-      sudo $pythoncommand "$genmondir/genloader.py" -z $config_path
+      $pythoncommand "$genmondir/genloader.py" -z $config_path
       ;;
     restart)
       found_action=true
       echo "Restarting genmon python scripts"
-      sudo $pythoncommand "$genmondir/genloader.py" -r $config_path
+      $pythoncommand "$genmondir/genloader.py" -r $config_path
       ;;
     *)
       #

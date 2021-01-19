@@ -502,7 +502,8 @@ class MySupport(MyCommon):
     @staticmethod
     def PermissionsOK():
 
-        if MyPlatform.IsOSLinux() and os.geteuid() == 0:
+#        if MyPlatform.IsOSLinux() and os.geteuid() == 0:
+        if MyPlatform.IsOSLinux():
             return True
         if MyPlatform.IsOSWindows():
             return True
